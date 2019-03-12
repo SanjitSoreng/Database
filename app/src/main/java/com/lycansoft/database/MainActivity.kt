@@ -15,7 +15,10 @@ class MainActivity : AppCompatActivity() {
         try {
             val myDatabase=this.openOrCreateDatabase("Singers",Context.MODE_PRIVATE,null)
             //myDatabase.execSQL("CREATE TABLE IF NOT EXISTS singers (name VARCHAR,age INT(2))")
-            //myDatabase.execSQL("INSERT INTO singers (name,age) VALUES ('Arijit',30)")
+            //myDatabase.execSQL("INSERT INTO singers (name,age) VALUES ('Raman',40)")
+            //myDatabase.execSQL("INSERT INTO singers (name,age) VALUES ('Sanjan',54)")
+            //myDatabase.execSQL("INSERT INTO singers (name,age) VALUES ('Kamal',56)")
+            //myDatabase.execSQL("INSERT INTO singers (name,age) VALUES ('Rony',23)")
             val cursor=myDatabase.rawQuery("SELECT * FROM singers",null)
             val nameIndex=cursor.getColumnIndex("name")
             val ageIndex=cursor.getColumnIndex("age")
